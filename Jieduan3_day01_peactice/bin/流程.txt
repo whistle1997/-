@@ -1,0 +1,16 @@
+①创建com.XXX.util包，存放JDBC工具等
+	util包下：
+	  1）创建类connectionFactory，用于创建JDBC连接和连接关闭功能，防止资源浪费。
+	     connectionFactory类中，首先定义4个关键要素------url，user，password，DriverClassName
+	     	创建方法，可以返回一个Connection连接。方法中，首先使用Class.forName(DriverClassName)反射一个Driver对象，使用DriverManager下的
+	     getConnection(url,user,password);创建一个connection对象并返回。
+	     	创建方法，用于关闭connection 和 preparedStatement
+	     	
+②创建com.XXX.bean/bo/pojo包，创建数据模型，封装类，变量要对应表的字段。    分装类要实现Serializable接口，网络传输时将对象序列化，提高速度。
+
+③创建com.XXX.dao包，用于指定对对象执行的操作，因此dao包中为接口。
+
+④创建com.XXX.impl包，实现dao包中的规则。
+
+⑤创建com.XXX.control包，放主方法，实现控制。
+	     

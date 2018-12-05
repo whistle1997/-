@@ -1,0 +1,4 @@
+#JustLearn
+#Fri Aug 17 09:53:42 CST 2018
+passkey=123456
+username=\u72D7\u5A03
